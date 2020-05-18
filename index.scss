@@ -1,0 +1,716 @@
+$font14:1.1vw;
+$font22:1.7vw;
+$font27:1.9vw;
+$font38:2.7vw;
+$font42:3vw;
+$colorA:#484848;
+
+/* mixin */
+@mixin main-sm{
+    width: 75%;
+    @media screen and (max-width:992px){
+        width: 60%;
+    }
+    @media screen and (max-width:768px){
+        width: 92%;
+    }
+}
+
+@mixin main-lg{
+    width: 75%;
+    @media screen and (max-width:992px){
+        width: 76%;
+    }
+    @media screen and (max-width:768px){
+        width: 92%;
+    }
+}
+
+@mixin main-{
+    margin-top: 12%;
+    color: $colorA
+}
+
+@mixin border {
+    border-top: 1.6px solid #484848;
+    width: 7%;
+    margin-bottom: 2%;
+    @media screen and (max-width:768px){
+        width: 10%;
+    }
+}
+
+@mixin h1 {
+    font-size: 4vw;
+    margin-bottom: 5%;
+    @media screen and (max-width:992px){
+        font-size: 4.2vw;
+    }
+    @media screen and (max-width:768px){
+        font-size: 5.5vw;
+    }
+}
+
+@mixin tex {
+    @media screen and (max-width:992px){
+        margin-top: 9%;
+    }
+}
+/* mixin */
+
+.wrapper{
+    overflow: hidden;
+    margin-top: 79px;
+    @media screen and (max-width:992px){
+        margin-top: 0;
+    }
+
+    /*header*/
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        z-index: 40;
+        @media screen and (max-width:992px){
+            display: none;
+        }
+       .navbar{
+        .nav-brand{
+            width: 6%;
+            height: auto;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        } 
+        
+       }
+       .header-r{
+        .header-r-p{
+            font-size: $font14;
+        }
+           p{
+               font-size: $font22;
+           }
+       }
+    }
+    /*header*/
+
+
+    /* モーダル */
+    .answer-modal-wrapper{
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-color: rgba(0,0,0,0.6);
+        display: none;
+        .mod{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 37%;
+            height: 65%;
+            background-color: white;
+            z-index: 60;
+            padding: 2% 2% 3% 2%;
+            @media screen and (max-width:768px){
+                width: 62%;
+                height: 77%;
+            }
+            .modal-batu{
+                color: gray;
+            }
+            .modal-tit{
+                h2{
+                    font-size: 1.8vw;
+                    color: #484848;
+                    @media screen and (max-width:768px){
+                        font-size: 3vw;
+                    }
+                }
+            }
+            .modal-answer{
+                p{
+                    color: #484848;
+                    @media screen and (max-width:768px){
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+        }
+    }
+    /* モーダル */
+
+    /* fade-in */
+    .fade-in1{
+        transition: .9s;
+        transform : translate(0, 100px);
+        opacity: 0;
+    }
+    .fade-in2{
+        transform : translate(0, 0);
+        opacity: 1;
+    }
+    /* fade-in */
+    
+
+    /*大きい写真部分*/
+    .top-wrapper{
+        width: 100%;
+        height: auto; 
+        padding: 5% 5% 5% 60%;     
+        background: url(airbnb_pic/topwrapper.jpg) no-repeat; 
+        h2{
+            @media screen and (max-width:992px){
+                font-size: 4vw;
+            }
+        } 
+        @media screen and (max-width:992px){
+            padding: 18% 0 3% 0;
+            background: url(airbnb_pic/topwrapper_mini.jpg) no-repeat; 
+        }
+        .top-a{
+            width: 100%;
+            height: auto;
+            padding: 7%;
+            @media screen and (max-width:992px){
+                display: none;
+            }
+            .top-a-hed{
+                h2{
+                    font-size: $font42;
+                }
+            }
+            .top-a-fee{
+                p{
+                    font-size: $font38;
+                }
+            }
+            .top-a-btn{
+                width: 100%;
+                height: auto;
+                .top-a-btn-a{
+                    width: 100%;
+                    height: auto;
+                    display: inline-block;
+                    padding: 2% 0;
+                }
+            }
+        }
+    }
+    /*大きい写真部分*/
+
+    /*992px以下で出現*/
+    .top-a_mini{
+        display: none;
+        @media screen and (max-width:992px){
+            display: block;
+            width: 68%;
+            .top-a_check{
+                p{
+                    font-size: 2.4vw;
+                }
+            }
+            .top-a-fee_mini{
+                p{
+                    font-size: 3.7vw;
+                }
+            }
+            .top-a-btn_mini{
+                width: 100%;
+                height: auto;
+                .top-a-btn-a_mini{
+                    width: 100%;
+                    height: auto;
+                    display: inline-block;
+                    padding: 2% 0;
+                }
+            }
+        }
+        @media screen and (max-width:768px){
+            width: 92%;
+            p{
+                font-size: 2.5vw;
+            }
+        }
+    }
+     /*992px以下で出現*/
+
+    .main{
+        width: 75%;
+        @media screen and (max-width:992px){
+            width: 60%;
+        }
+        @media screen and (max-width:768px){
+            width: 92%;
+        }
+
+        /*mainA*/
+        .mainA{
+            margin-top: 10%;
+            justify-content: space-around;
+            .mainA-tex{
+                .inner{
+                    height: 100%;
+                    color: $colorA;
+                    h2{
+                        font-size: $font27;
+                        @media screen and (max-width:992px){
+                            font-size: 2.5vw;
+                        }
+                        @media screen and (max-width:768px){
+                            font-size: 3.5vw;
+                        }
+                    }
+                }
+            }
+        }
+        /*mainA*/
+
+        /*mainB*/
+        .mainB{
+            @include main-;
+            .border-B{
+                @include border;
+            }
+            h1{
+                @include h1;
+            }
+            .mainB-tex{
+                @include tex;
+            }
+            h2{
+                font-size: 2vw;
+                margin-bottom: 8%;
+                @media screen and (max-width:992px){
+                    margin-bottom: 4%;
+                    font-size: 2.5vw;
+                    font-weight: bold;
+                }
+                @media screen and (max-width:768px){
+                    font-size: 3.5vw;
+                }
+            }
+        }
+        /*mainB*/
+    }
+    
+    /*main2-lg*/
+    .main2{
+        @include main-lg;
+        /*mainB 2段目*/
+        .mainB-2{
+            margin-top: 15%;
+            .mainB-pic{
+                max-width: 100%;
+                height: auto;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .mainB-tex-2{
+                p{
+                    font-size: 2.3vw;
+                    color: $colorA;
+                    @media screen and (max-width:768px){
+                        font-size: 3vw;
+                        margin-top: 5%;
+                    }
+                }
+            }
+            .mainB-tex-3{
+                p{
+                    font-size: 1.3vw;
+                    color: #767676;
+                    @media screen and (max-width:768px){
+                        font-size: 2vw;
+                    }
+                }
+            }
+            .mainB-btn{
+                .btn{
+                    border-width: 2px;
+                }
+            }
+        }
+        
+        /*mainC*/
+        .mainC{
+            @include main-;
+            .border-C{
+                @include border;
+            }
+            h1{
+                @include h1;
+            }
+            .mainC-row{
+                .mainC-tex{
+                    @include tex;
+                    font-size: 1.3vw;
+                    color: $colorA;
+                    @media screen and (max-width:992px){
+                        margin-top: 2%;
+                        font-size: 1.8vw;
+                    }
+                    @media screen and (max-width:768px){
+                        font-size: 2.3vw;
+                    }
+                }
+            }
+            .mainC-list{
+                @media screen and (max-width:992px){
+                    margin-top: 5%;
+                }
+                ul{
+                    li{
+                        font-size: 1.3vw;
+                        margin-bottom: 5%;
+                        @media screen and (max-width:992px){
+                            font-size: 1.8vw;
+                            margin-bottom: 4%;
+                        }
+                        @media screen and (max-width:768px){
+                            font-size: 2.3vw;
+                        }
+                    }
+                }
+            }
+            .mainC-pic{
+                max-width: 100%;
+                height: auto;
+                margin-top: 8%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    /*main3-lg*/
+    .main3{
+        @include main-sm;
+        .mainD{
+            @include main-;
+            .border-D{
+                @include border;
+            }
+            h1{
+                @include h1;
+            }
+            .row{
+                .mainD-tex{
+                    @include tex;
+                    .inner{
+                        h2{
+                            font-size: 2vw;
+                            margin-bottom: 8%;
+                            @media screen and (max-width:992px){
+                                margin-bottom: 4%;
+                                font-size: 2.5vw;
+                                font-weight: bold;
+                            }
+                            @media screen and (max-width:768px){
+                                font-size: 3.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main4{
+        @include main-lg;
+        .mainD-2{
+            margin-top: 15%;
+            .mainD-pic{
+                max-width: 100%;
+                height: auto;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .mainD-tex-2{
+                p{
+                    font-size: 2.3vw;
+                    color: $colorA;
+                    @media screen and (max-width:768px){
+                        font-size: 3vw;
+                        margin-top: 5%;
+                    }
+                }
+            }
+            .mainD-tex-3{
+                p{
+                    font-size: 1.3vw;
+                    color: #767676;
+                    @media screen and (max-width:768px){
+                        font-size: 2vw;
+                    }
+                }
+            }
+            .mainD-btn{
+                .btn{
+                    border-width: 2px;
+                }
+            }
+        }
+    }
+
+    /* mainE */
+    .main5{
+        @include main-lg;
+        .mainE{
+            margin-top: 12%;
+            .border-E{
+                @include border;
+            }
+            h1{
+                @include h1;
+            }
+            .mainE-row{
+        
+                .mainE-tex{
+                    color: $colorA;
+                    @media screen and (max-width:768px){
+                        margin-bottom: 3%;
+                    }
+                    .inner{
+                        h2{
+                            font-size: 4vw;
+                            margin-bottom: 8%;
+                            text-align: center;
+                            @media screen and (max-width:992px){
+                                margin-bottom: 4%;
+                                font-size: 4.5vw;
+                            }
+                            @media screen and (max-width:768px){
+                                font-size: 5.5vw;
+                                text-align: left;
+                                margin-bottom: 2%;
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            @media screen and (max-width:768px){
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* mainE */
+
+
+        .mainF{
+            @include main-;
+            .border-F{
+                @include border;
+            }
+            h1{
+                @include h1;
+            }
+            .mainF-row{
+                justify-content: space-around;
+                .mainF-tex{
+                    @include tex;
+                    .inner{
+                        h2{
+                            font-size: 2vw;
+                            margin-bottom: 8%;
+                            @media screen and (max-width:992px){
+                                margin-bottom: 4%;
+                                font-size: 2.5vw;
+                                font-weight: bold;
+                            }
+                            @media screen and (max-width:768px){
+                                font-size: 3.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* よくある質問のとこ */
+        .mainG{
+            @include main-;
+            .border-F{
+                @include border;
+            }
+            h1{
+                @include h1;
+            }
+            .mainG-row{
+                .mainG-tex{
+                    ul{
+                        li{
+                            border-bottom: 1px solid #ebebeb;
+                            padding: 5% 0;
+                            font-size: 1.3vw;
+                            color: #008489;
+                            cursor: pointer;
+                            @media screen and (max-width:992px){
+                                font-size: 2vw;
+                            }
+                            @media screen and (max-width:768px){
+                                font-size: 2.5vw;
+                            }
+                        }
+                        .mainG-answer{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainG2{
+            margin-top: 12%;
+            h2{
+                color: $colorA;
+                font-size: 1.8vw;
+                @media screen and (max-width:768px){
+                    font-size: 3.8vw;
+                }
+            }
+            .mainG2-row{
+                .mainG2-tex{
+                    @media screen and (max-width:768px){
+                        display: flex;
+                        margin-bottom: 3%;
+                        border: 1px solid #ebebeb;
+                        border-radius: 8px;
+                        padding-left: 0;
+                    }
+                    .mainG2-pic{
+                        max-width: 100%;
+                        height: auto;
+                        @media screen and (max-width:768px){
+                            max-width: 18%;
+                        }
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .mainG2-det{
+                        margin-top: 3%;
+                        @media screen and (max-width:768px){
+                            margin-top: 2%;
+                            margin-left: 4%;
+                        }
+                        h2{
+                            font-size: 1.4vw;
+                            font-weight: bold;
+                            margin-bottom: 1%;
+                            @media screen and (max-width:768px){
+                                font-size: 2.2vw;
+                            }
+                        }
+                        p{
+                            font-size: 1.2vw;
+                            margin-bottom: 2%;
+                            @media screen and (max-width:768px){
+                                font-size: 2.1vw;
+                            }
+                        }
+                    }
+                    .mainG2-a{
+                        @media screen and (max-width:768px){
+                            display: none;
+                        }
+                        a{
+                            color: #008489;
+                            display: inline-block;
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main6{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        @media screen and (max-width:992px){
+            width: 100%;
+        }
+        .mainH{
+            max-width: 100%;
+            height: auto;
+            margin-top: 10%;
+            background: url(airbnb_pic/yellow_flower.jpg) no-repeat center;
+            padding: 12% 58% 17% 7%;
+            @media screen and (max-width:992px){
+                padding: 11% 49% 22% 19%;
+            }
+            @media screen and (max-width:768px){
+                padding: 6% 49% 26% 5%;
+            }
+            .mainH-tex{
+                h2{
+                    font-size: 4.2vw;
+                    @media screen and (max-width:992px){
+                        font-size: 4vw;
+                    }
+                    @media screen and (max-width:768px){
+                        font-size: 6vw;
+                    }
+                }
+            }
+            .mainH-btn{
+                width: 30%;
+                height: auto;
+                margin-top: 5%;
+                @media screen and (max-width:992px){
+                    width: 41%;
+                    margin-top: 12%;
+                }
+                @media screen and (max-width:768px){
+                    width: 38%;
+                    margin-top: 9%;
+
+                }
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    height: auto;
+                    padding: 9%;
+                }
+            }
+        }
+    }
+
+    footer{
+        margin-top: 5%;
+        @include main-lg;
+        .footer-top{
+            @media screen and (max-width:768px){
+                display: none;
+            }
+        }
+        .footer-bottom{
+            justify-content: space-between;
+            .footer-bottom-right{
+                .ico{
+                    margin: 0 30%;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
